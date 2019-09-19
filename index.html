@@ -7,7 +7,7 @@
   <body>
     <header>
       <section>
-        <h3>Верхняя часть хэдера</h3>
+        <h3 class="visually-hidden">Верхняя часть хэдера</h3>
       <!-- Лого -->
       <a href="index.html"><img src="img/index/logo.png" alt="Лого" width="220" height="47"> ТЕХНОМАРТ</a>
       <!-- Кнопки верхней части хэдэра -->
@@ -19,7 +19,7 @@
       <!-- Меню навигации -->
     </section>
     <section>
-      <h3>Нижняя часть хэдера</h3>
+      <h3 class="visually-hidden">Нижняя часть хэдера</h3>
       <!-- Заголовок и контактная информация -->
          <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
          <div>
@@ -50,7 +50,7 @@
 
     <main>
       <section>
-            <h2>Услуги</h2>
+            <h2 class="visually-hidden">Услуги</h2>
             <div>
               <img src="img/svg/icon-1.svg" alt="Иконка раздела">
               <h3>Материалы</h3>
@@ -244,7 +244,7 @@
 
     <footer>
       <section>
-      <h3>Верхняя часть футера</h3>
+      <h3 class="visually-hidden">Верхняя часть футера</h3>
       <div>
       <!-- Лого -->
       <a href="#"><img src="img/index/logo.png" alt="Лого"> ТЕХНОМАРТ</a>     
@@ -272,7 +272,7 @@
      </section>
 
      <section>
-      <h3>Копирайт и контакты</h3>
+      <h3 class="visually-hidden">Копирайт и контакты</h3>
       <p>©2010-2017 Компания "Техномарт"<br>
         Все права защищены</p>
       <div>
@@ -288,5 +288,25 @@
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
      </section>
     </footer>
+    <section>
+        <h2 class="visually-hidden">Форма заполнения письма</h2>
+        <form action="htmacademy.ru" method="POST">
+        <div>
+        <p>
+        <label for="name-field">Ваше имя:</label>
+        <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+        </p>
+        <p><label for="e-mail-field">Ваш e-mail:</label>
+        <input type="text" name="e-mail" id="e-mail-field" placeholder="email@example.com">
+        </p>
+        </div>   
+        <label>
+        Текск письма:
+        <textarea name="mail" id="mail-field" cols="30" rows="4" placeholder="В свободной форме"></textarea>
+        </label>
+        <button type="submit">Отправить</button>
+      </form>  
+      <button type="button" aria-label="Закрыть"></button>
+      </section>
   </body>
 </html>

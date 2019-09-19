@@ -7,7 +7,7 @@
   <body>
     <header>
       <section>
-        <h3>Верхняя часть хэдера</h3>
+        <h3 class="visually-hidden">Верхняя часть хэдера</h3>
       <!-- Лого -->
       <a href="index.html"><img src="img/index/logo.png" alt="Лого" width="220" height="47"> ТЕХНОМАРТ</a>
       <!-- Кнопки верхней части хэдэра -->
@@ -19,7 +19,7 @@
       <!-- Меню навигации -->
     </section>
     <section>
-      <h3>Нижняя часть хэдера</h3>
+      <h3 class="visually-hidden">Нижняя часть хэдера</h3>
       <!-- Заголовок и контактная информация -->
          <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
          <div>
@@ -55,7 +55,7 @@
     <main>
         <h2>Перфораторы</h2>
         <section>  
-          <h3>Хлебные крошки</h3>
+          <h3 class="visually-hidden">Хлебные крошки</h3>
           <ul>
             <li><a href="index.html"><img src="img/svg/icon-home.svg" alt="Иконка домашней страницы"></a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -64,20 +64,20 @@
           </ul>
         </section>
         <section>
-          <h3>Фильтры</h3>
+          <h3 class="visually-hidden">Фильтры</h3>
             <div>
-              <h4>Фильтр производитея</h4>
+              <h4 class="visually-hidden">Фильтр производитея</h4>
               <p>Производители:</p>
               <!-- Форма фильтра -->
             </div>
             <div>
-              <h4>Фильтр питания</h4>
+              <h4 class="visually-hidden">Фильтр питания</h4>
               <!-- Форма фильтра -->
             </div>
             <button type="button">Показать</button>
         </section>
         <section>
-          <h3>Карточки товара</h3>
+          <h3 class="visually-hidden">Карточки товара</h3>
           <ul>
             <li>
                   <a href="#">
@@ -230,11 +230,12 @@
             <li><a href="#">Следующая</a></li>
           </ul>
         </div>
+
     </main>
 
     <footer>
       <section>
-      <h3>Верхняя часть футера</h3>
+      <h3 class="visually-hidden">Верхняя часть футера</h3>
       <div>
       <!-- Лого -->
       <a href="#"><img src="img/index/logo.png" alt="Лого"> ТЕХНОМАРТ</a>     
@@ -262,7 +263,7 @@
      </section>
      <!-- Нижняя часть футера -->
      <section>
-      <h3>Копирайт и контакты</h3>
+      <h3 class="visually-hidden">Копирайт и контакты</h3>
       <p>©2010-2017 Компания "Техномарт"<br>
         Все права защищены</p>
       <div>
@@ -277,6 +278,17 @@
         <p><span> Разработано-</span><br>
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
      </section>
-    </footer>
+    </footer>        
+   <section>
+     <h2 class="visually-hidden">Форма корзины</h2>
+     <div>
+     <p>
+      <span>Товар добавлен в корзину</span>
+     </p>
+     <a href="#" >Оформить заказ</a>
+     </div>
+     <button type="button">Продолжить покупки</button>
+     <button type="button" aria-label="Закрыть"></button>
+   </section>
     </body>
 </html>
