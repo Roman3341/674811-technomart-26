@@ -3,36 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
   </head>
   <body>
     <header>
-      <section>
-        <h3 class="visually-hidden">Верхняя часть хэдера</h3>
-      <!-- Лого -->
-      <a href="index.html"><img src="img/index/logo.png" alt="Лого" width="220" height="47"> ТЕХНОМАРТ</a>
-      <!-- Кнопки верхней части хэдэра -->
+      <section class="header-top">
+          <h3 class="visually-hidden">Верхняя часть хэдера</h3>
+          <a href="index.html" class="logo"> <!--<img src="img/index/logo.png" alt="Лого" width="220" height="47">--> ТЕХНОМАРТ</a>
           <a href="#"><img src="img/svg/icon-search.svg" alt="Иконка поиска"> Поиск:</a>   
           <!-- Здесь будет форма поиска -->
           <a href="#"><img src="img/svg/icon-bookmark.svg" alt="Иконка закладки"> Закладки:</a>
-          <a href="#"><img src="img/svg/icon-cart.svg" alt=""> Корзина:</a>
-          <a href="#">Оформить заказ</a> 
-      <!-- Меню навигации -->
+          <a href="#"><img src="img/svg/icon-cart.svg" alt="Иконка корзины"> Корзина:</a>
+          <a href="#" class="make-order">Оформить заказ</a> 
     </section>
-    <section>
+    <section class="header-bottom">
       <h3 class="visually-hidden">Нижняя часть хэдера</h3>
       <!-- Заголовок и контактная информация -->
-         <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+         <h1>Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
          <div>
-        <img src="img/svg/icon-phone.svg" alt="Иконка телефона">
-         <p><span>+7(812)555-05-55</span></p>
+        <!-- <img src="img/svg/icon-phone.svg" alt="Иконка телефона"> -->
+         <p class="contact-field"><span class="call-number">+7(812)555-05-55</span></p>
          </div>
          <p>
-           <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</span>
+           <span class="header-adress">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</span>
          </p>
          <!-- Аккаунт -->
-       <ul>
+       <ul class="account">
          <li><a href="#">Регистрация</a></li>
-         <li><a href="#"><img src="img/svg/icon-login.svg" alt=""> Войти</a></li>
+         <li><a href="#"><!--<img src="img/svg/icon-login.svg" alt="">--> Войти</a></li>
        </ul>
       </section>      
        <nav>
@@ -51,12 +51,12 @@
     <main>
       <section>
             <h2 class="visually-hidden">Услуги</h2>
-            <div>
+            <div class="materials">
               <img src="img/svg/icon-1.svg" alt="Иконка раздела">
               <h3>Материалы</h3>
               <a href="#">На любой вкус</a>
             </div>
-            <div>
+            <div class="tool">
               <img src="img/svg/icon-2.svg" alt="Иконка раздела">
               <h3>Инструмент</h3>
               <a href="#">На все случаи</a>
@@ -79,35 +79,35 @@
               <button type="button"><img src="img/svg/icon-left.svg" alt="Иконка предыдущего слайда"> Предыдущий слайд</button>
               <button type="button"><img src="img/svg/icon-right.svg" alt="Иконка следующего сайта"> Следующий слайд</button>
             </div>
-            <div>
+            <div class="vehicle">
              <img src="img/svg/icon-3.svg" alt="Картинка раздела">
              <h3>Техника</h3>
              <a href="#">Для стройки</a>
             </div>
-            <div>
+            <div class="sales">
               <img src="img/svg/icon-4.svg" alt="Иконка раздела">
               <h3>Скидки 50%</h3>
               <a href="#">На 350 товаров</a>
             </div>
-            <div>
+            <div class="delivery">
               <img src="img/svg/icon-5.svg" alt="Иконка раздела">
               <h3>Доставка</h3>
               <a href="#">Бесплатно</a>
             </div>
          </section>
       <section>
-        <div>
+        <div class="popular-products">
         <h2>Популярные товары</h2>
         <a href="#">Все популярные товары</a>
-        </div>
+        </div >
          <ul>
-           <li>
+           <li class="product">
              <a href="#">
                    <img src="img/index/Perforator_1.jpg" alt="BOSCH BFG 9000" width="218" height="170">
                    <span>Перфоратор BOSCH</span>
                    <span>BFG 9000</span>
                    <span>32500 Р.</span>
-                   <span>25500 P. </span>
+                   <span class="final-cost">25500 P. </span>
                    <span>new</span>
                    </a>
                    <div>
@@ -117,7 +117,7 @@
                   </ul>
                   </div>
            </li>
-           <li>
+           <li class="product">
              <a href="#">
                    <img src="img/index/Perforator_2.jpg" alt="BOSCH BFG 3000" width="218" height="170">
                    <span>Перфоратор BOSCH</span>
@@ -133,7 +133,7 @@
                   </ul>
                   </div>
            </li>
-           <li>
+           <li class="product">
              <a href="#">
                    <img src="img/index/Perforator_3.jpg" alt="BOSCH BFG 6000" width="218" height="170">
                    <span>Перфоратор BOSCH</span>
@@ -149,7 +149,7 @@
                    </ul>
                   </div>
            </li>
-           <li>
+           <li class="product">
              <a href="#">
                    <img src="img/index/Perforator_4.jpg" alt="BOSCH BFG 2000" width="218" height="170">
                    <span>Перфоратор BOSCH</span>
@@ -220,20 +220,20 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="technomart-company">
         <h2>Компания "Техномарт"</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и <br>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
            Техномарт работает со смногими транспортными компаниями: </p>
-           <ul>
+           <ul class="transport-companies">
              <li>Деловые линии</li>
              <li>Автотрейдинг</li>
              <li>ЖелДорЭкспедиция</li>
            </ul>
            <a href="#">Подробнее о компании</a>
       </section>
-      <section>
+      <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать сами,<br>
            заехав в наш офис:</p>
@@ -243,17 +243,17 @@
     </main>
 
     <footer>
-      <section>
+      <section class="footer">
       <h3 class="visually-hidden">Верхняя часть футера</h3>
-      <div>
+      <div class="footer-logo">
       <!-- Лого -->
-      <a href="#"><img src="img/index/logo.png" alt="Лого"> ТЕХНОМАРТ</a>     
+      <a href="#"><!--<img src="img/index/logo.png" alt="Лого">--> ТЕХНОМАРТ</a>     
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/18 <br>
            +7(812)555-05-55</p>
       </div>
 
       <div>
-        <ul>
+        <ul class="footer-navigation">
           <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
@@ -262,7 +262,7 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <ul>
+        <ul class="footer-services">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
           <li><a href="#">Инструмент</a></li>
@@ -271,21 +271,21 @@
       </div>
      </section>
 
-     <section>
+     <section class="copyright">
       <h3 class="visually-hidden">Копирайт и контакты</h3>
       <p>©2010-2017 Компания "Техномарт"<br>
         Все права защищены</p>
       <div>
-        <ul>
+        <ul class="societies">
           <li><a href="#"><img src="img/svg/icon-vk.svg" alt="Иконка ВК"></a></li>
           <li><a href="#"><img src="img/svg/icon-fb.svg" alt="Иконка Фэйсбук"></a></li>
           <li><a href="#"><img src="img/svg/icon-insta.svg" alt="Иконка инстаграм"></a></li>
         </ul>
       </div>
         <p><span>Обратная связь:</span><br>
-          <a href="#">mail@htmlacademy.ru</a></p>
+          <a href="#" class="adresses">mail@htmlacademy.ru</a></p>
         <p><span> Разработано-</span><br>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="adresses">htmlacademy.ru</a></p>
      </section>
     </footer>
     <section>

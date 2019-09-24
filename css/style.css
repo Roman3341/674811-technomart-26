@@ -1,0 +1,316 @@
+body,
+html {
+  height: 100%;
+  width: 1200px;
+}
+
+body {
+  font-family: 'Cuprum', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button[type="button"] {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+label {
+  cursor: pointer;
+}
+/*Индекс. Хэдер. Верхняя часть */
+.header-top,
+.header-bottom,
+nav {
+  background-color: #f4f7f9;
+  font-size: 17px;
+}
+
+.header-top {
+  width: 1200px;
+  background-color:#293449;
+  color: #ffffff;
+}
+
+.header-top .logo {
+  font-size: 21px;
+  padding: 13px 55px;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  background-color: #ee3643;
+}
+
+.header-top .make-order {
+  padding: 12px 20px;
+  background-color: #63a63e;
+}
+
+/* Индекс. Хэдер. Нижняя часть */
+h1 {
+  font-style: italic;
+  font-size: 16px;
+  color: #ee3643;
+  width: 200px;
+}
+
+.contact-field {
+  width: 280px;
+  border: solid 3px #ffffff;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.contact-field::before {
+  content: url(img/index/icon-phone.svg);
+  width: 19px;
+  height: 19px;
+}
+
+.call-number {
+  font-size: 21px;
+  color: #ee3643;
+}
+
+.header-adress {
+  font-size: 14px;
+  color: #32425c;
+}
+
+.account li:nth-child(2)::before {
+  content: url(img/index/icon-login.svg);
+  width: 20px;
+  height: 17px;
+}
+
+.account li:nth-child(1){
+  font-size: 21px;
+  text-align: center;
+  width: 150px;
+  background-color: #ffffff;
+  padding: 15px 0; 
+}
+
+.account li:nth-child(2) {
+  font-size: 21px;
+  width: 121px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 15px 0;
+}
+/* Хэдер. Навигация */
+nav {
+  width: 940px;
+  box-shadow: inset 0px -5px 0 0 var(--dark);
+  background-color: #32425c;
+  color: #ffffff;
+}
+
+/* Индекс.Мэин*/
+main a{
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 135px;
+  height: 40px;
+  border-radius: 5px;
+}
+/* Услуги */
+.materials h3,
+.tool h3,
+.delivery h3,
+.sales h3,
+.vehicle h3 {
+  font-size: 24px;
+  font-style: bold;
+}
+
+.materials,
+.tool,
+.delivery,
+.sales,
+.vehicle {
+  width: 300px;
+  height: 123px;
+  color: #ffffff;
+}
+
+.materials::before {
+  content: url(img/index/new-flag.png);
+  width: 60px;
+  height: 60px;
+}
+
+.materials {
+  background-color: #ffbf47;
+}
+
+.tool {
+  background-color: #3bbce3;
+}
+
+.vehicle {
+  background-color: #dc91d8;
+}
+
+.sales {
+  background-color: #8ed78f;
+}
+
+.delivery {
+  background-color: #ffbf47;
+}
+
+/* Популярные товары */
+.popular-products {
+  width: 940px;
+  height: 89px;
+  background-color: #f9f5f0;
+}
+
+.popular-products h2{
+  font-size: 30px;
+}
+
+.popular-products a {
+  min-width: 250px;
+  min-height: 38px;
+  background-color: #ee3643; 
+}
+.product {
+  display: block;
+  width: 220px;
+  height: 318px;
+  border: solid 1px #eaeaea;
+  background-color: #ffffff;
+}
+
+
+
+.final-cost {
+  display: block;
+  background-image: url(img/index/red-button.svg);
+  min-width: 141px;
+  min-height: 25px;
+}
+
+/*Индекс. Компания Техномарт и Контакты */
+.technomart-company h2,
+.contacts h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.technomart-company {
+  width: 540px;
+}
+
+.technomart-company p,
+.contacts p {
+  font-family: 'Arial';
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.transport-companies li::before{
+  content:"";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+}
+
+.technomart-company a {
+  width: 220px;
+  height: 38px;
+  background-color: #ee3643;
+}
+
+.contacts a {
+  width: 300px;
+  height: 38px;
+  background-color: #ee3643;
+}
+
+/* Индекс. Футер и Копирайт*/
+
+.footer,
+.copyright {
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.footer-logo a {
+  display: block;
+  width: 220px;
+  height: 65px;
+  font-size: 23px;
+  text-align: center;
+  background-color: #ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.footer-logo p,
+.footer-navigation,
+.footer-services{
+  font-size: 18px;
+}
+
+.footer-services {
+  color:  #ffd180;
+}
+
+/* Копирайт */
+.copyright {
+  background-color: #293449;
+}
+
+.copyright p {
+  font-size: 16px;
+}
+
+.societies li {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-color: #212a3a;
+}
+
+.copyright .adresses {
+  color:  #ffd180;
+}
