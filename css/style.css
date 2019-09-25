@@ -52,6 +52,14 @@ img {
 label {
   cursor: pointer;
 }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect( 0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /*Индекс. Хэдер. Верхняя часть */
 .header-top,
 .header-bottom,
@@ -157,7 +165,7 @@ main a{
 .sales h3,
 .vehicle h3 {
   font-size: 24px;
-  font-style: bold;
+  font-weight: bold;
 }
 
 .materials,
