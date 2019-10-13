@@ -94,65 +94,87 @@ label {
   display: flex;
   align-items: center;
 }
+
+.header-top .logo {
+  display: block;
+  font-size: 21px;
+  padding: 12px 62px;
+  box-shadow: 0px 5px 0 0 rgba(177, 5, 5, 0.74);
+  background-color: #ee3643;
+}
+
+.search-form {
+  position: relative;
+}
+
 .search {
-  width: 245px;
+  width: 270px;
   color: #ffffff;
   background-color: #293449;
   border: none;
   padding: 14px 0px 15px 0;
-
-  /*
-  background-image: url(img/index/icon-search.svg);
-  background-position: 15px 50%;
-  background-repeat: no-repeat;
-  margin-left: 15px;*/
-}
-
-.search-label{
-  position: relative;
-}
-
-.search-label::before {
-  content: url(img/index/icon-search.svg);
-  opacity: 0.3;
-  position: absolute;
-  top: 2px;
-  left: 23px;
-  cursor: default;
 }
 
 .search:focus {
   padding: 14px 0px 15px 0;
-  margin-left: 15px;
-  width: 230px;
+  width: 270px;
   border: none;
   color: black;
   font-size: 17px;
-  background-image: url(img/index/icon-search-red.png);
+  background-image: url(img/index/icon-search3.svg);
+  background-size: 17px;
   background-color: #ffffff;
-  background-position: 16px 50%;
+  background-position: 17px 12px;
   background-repeat: no-repeat;
 }
 
+.search-icon {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  opacity: 0.3;
+}
+
+.search-icon:hover {
+  opacity: 1;
+}
+
+.search::-webkit-input-placeholder { 
+  color: #ffffff;
+  opacity: 1; 
+}
+.search:-ms-input-placeholder { 
+  color: #ffffff;
+  opacity: 1;  
+}
+.search::-ms-input-placeholder { 
+  color: #ffffff;
+  opacity: 1; 
+}
+.search::placeholder { 
+  color: #ffffff;
+  opacity: 1; 
+} 
+
 .search[placeholder="Поиск:"] {
   padding-left: 50px;
+  opacity: 1;
 }
 
 .marker {
-  padding: 14px 25px;
-  margin-left: auto;
+  padding: 14px 28px;
 }
 
 .marker::before {
   content:url(img/index/icon-bookmark.svg);
   opacity: 0.3;
-  margin-right: 15px;
+  margin-right: 11px;
 }
 
 .cart{
-  padding: 14px 25px;
-  margin-left: auto;
+  padding: 14px 30px;
 }
+
 
 .cart::before {
   content:url(img/index/icon-cart.svg);
@@ -160,18 +182,38 @@ label {
   margin-right: 17px;
 }
 
-.header-top .logo {
-  display: inline-block;
-  font-size: 21px;
-  padding: 12px 55px;
-  box-shadow: 0px 5px 0 0 rgba(177, 5, 5, 0.74);
-  background-color: #ee3643;
+.cart:hover::before,
+.marker:hover::before {
+  opacity: 1;
+}
+
+.cart:hover,
+.marker:hover {
+  background-color: #212a3a;
+}
+
+.cart:active,
+.marker:active{
+  background-color: #161d29;
+}
+
+.cart:active,
+.marker:active{
+  opacity: 0.5;
 }
 
 .header-top .make-order {
   display: inline-block;
-  padding: 14px 20px 15px;
+  padding: 14px 21px 15px;
   background-color: #63a63e;
+}
+
+.header-top .make-order:hover {
+  background-color: #5fbb2d;
+}
+
+.header-top .make-order:active {
+  background-color: #518534;
 }
 
 /* Индекс. Хэдер. Нижняя часть */
@@ -229,17 +271,27 @@ h1 {
   display: flex;
 }
 
-.enter-button::before {
-  content: url(img/index/icon-login.svg);
+.account li {
+  display: flex;
+}
+
+
+.enter-button::before,
+.enter-button:active::before {
+  content: url(img/index/icon-login-gray.svg);
   width: 20px;
   height: 17px;
+}
+
+.enter-button:hover::before {
+  content: url(img/index/icon-login.svg);
 }
 
 .enter-button{
   font-size: 21px;
   text-align: center;
   background-color: #ffffff;
-  padding: 11px 37px; 
+  padding: 11px 24px; 
   max-height: 45px;
   margin-right: 10px;
   margin-bottom: auto;
@@ -250,19 +302,41 @@ h1 {
   text-align: center;
   background-color: #ffffff;
   max-height: 45px;
-  padding: 11px 37px; 
-  margin-bottom: auto;
+  padding: 11px 24px; 
+}
+
+.enter-button:hover,
+.registration-button:hover {
+  color: #ee3643;
+}
+
+.enter-button:active,
+.registration-button:active {
+  color: black;
+  opacity: 0.3;
 }
 /* Хэдер. Навигация */
 
 .menu-list {
   display: flex;
   justify-content: space-around;
-  padding: 25px;
   box-shadow: inset 0px -5px 0 0 var(--dark);
   background-color: #32425c;
   color: #ffffff;
 }
+
+.menu-list a{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 127px;
+  min-height: 60px;
+}
+
+.menu-list a:hover {
+  background-color: #1d2739;
+}
+
 /* Индекс.Мэин*/
 /*
 main a{
@@ -276,19 +350,26 @@ main a{
   border-radius: 5px;
 }
 */
-main {
-  margin-left: 130px;
-  margin-right: 130px;
-}
 
 /* Услуги */
+
+.main-services {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  margin-bottom: 53px;
+}
+
 .materials h3,
 .tool h3,
 .delivery h3,
 .sales h3,
 .vehicle h3 {
+  padding-left: 23px;
+  padding-top: 26px;
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .materials,
@@ -300,15 +381,131 @@ main {
   height: 123px;
   color: #ffffff;
 }
+.materials,
+.tool,
+.vehicle,
+.sales,
+.delivery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffbf47;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.vehicle,
+.sales,
+.delivery {
+  margin-right: 0;
+}
+
+.services-left{
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
+}
+
+.tool a,
+.materials a,
+.vehicle a,
+.sales a,
+.delivery a{
+  display: block;
+  width: 135px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  vertical-align: center;
+  text-align: center;
+  padding: 14px 0;
+  background-color: rgba(0,0,0, 0.1);
+  border-radius: 3px;
+  margin-left: 25px;
+}
+
+.tool a:hover,
+.materials a:hover,
+.vehicle a:hover,
+.sales a:hover,
+.delivery a:hover{
+  background-color: rgba(0,0,0, 0.2);
+}
+
+.tool a:active,
+.materials a:active,
+.vehicle a:active,
+.sales a:active,
+.delivery a:active{
+  background-color: rgba(0,0,0, 0.3);
+}
+
 
 .materials::before {
+  position: absolute;
+  top:0;
+  right: 0;
   content: url(img/index/new-flag.png);
   width: 60px;
   height: 60px;
 }
 
-.materials {
-  background-color: #ffbf47;
+.materials img {
+  margin-top: 31px;
+  margin-right: 43px;
+}
+
+.tool img {
+  margin-top: 33px;
+  margin-right: 28px;
+ 
+}
+
+.vehicle img {
+  margin-top: 31px;
+  margin-right: 31px;
+}
+
+.sales img {
+  margin-top: 26px;
+  margin-right: 45px;
+}
+
+.delivery img {
+  margin-top: 32px;
+  margin-right: 31px;
+}
+
+.slider-drills {
+  position: relative;
+}
+
+.first-slide-heading,
+.second-slide-heading {
+  position: absolute;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  top: 27px;
+  left: 24px;
+}
+
+.first-slide-text,
+.second-slide-text {
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  top: 65px;
+  left: 25px;
+}
+
+.services-right {
+  display: flex;
+  flex-direction: column;
 }
 
 .tool {
@@ -328,35 +525,188 @@ main {
 }
 
 /* Популярные товары */
-.popular-products {
-  width: 940px;
+
+.popular-products,
+.popular-manufacturer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   height: 89px;
   background-color: #f9f5f0;
+  margin-bottom: 21px;
 }
 
-.popular-products h2{
+.popular-products h2,
+.popular-manufacturer h2 {
   font-size: 30px;
+  line-height: 30px;
+  margin: auto auto auto 24px;
 }
 
-.popular-products a {
-  min-width: 250px;
-  min-height: 38px;
+.popular-products a,
+.popular-manufacturer a {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 13px 55px;
+  color: #ffffff;
   background-color: #ee3643; 
+  margin: auto 24px auto auto;
+  border-radius: 3px;
+  text-transform: uppercase;
 }
-.product {
-  display: block;
+
+.popular-products a:hover,
+.popular-manufacturer a:hover,
+.about-company:hover,
+.write-us:hover {
+  background-color: #ca2c37;
+}
+
+.popular-products a:active,
+.popular-manufacturer a:active,
+.about-company:active,
+.write-us:active {
+  background-color: #ba2732;
+}
+
+.tool-list-index {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tool-list-index li,
+.tool-list li {
+  font-family: 'PTSans', 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
   width: 220px;
   height: 318px;
-  border: solid 1px #eaeaea;
-  background-color: #ffffff;
+  border: solid 1px #e5e5e5;
+  margin-bottom: 20px;
 }
 
-.final-cost {
-  display: block;
-  background-image: url(img/index/red-button.svg);
-  min-width: 141px;
-  min-height: 25px;
+.tool-list-index li:hover,
+.tool-list li:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
+
+.item-hover {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 217px;
+  margin: 1px;
+  height: 164px;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.buy-button {
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  color: #ffffff;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  background-color: #63a63e;
+  margin: auto auto 7px auto;
+  box-shadow: inset 0px -3px 0 0 #367315;
+  border-radius: 3px;
+}
+
+.buy-button::before {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  content:url(img/index/icon-cart.svg);
+  opacity: 0.3;
+  margin-right: 17px;
+}
+
+.mark-button {
+  font-size: 14px;
+  line-height: 18px;
+  color: #32425c;
+  padding: 7px 22px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  margin: auto;
+  border: solid 3px #63a63e;
+  border-radius: 3px;
+}
+
+/*Индекс. Популярные производители*/
+
+.manufacturer-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 85px;
+}
+
+.manufacturer-list a {
+  display: block;
+  width: 220px;
+  height: 145px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: solid 1px #eaeaea;
+}
+
+.manufacturer-list a:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturer-list a:active {
+  opacity: 0.5;
+  box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.bosch {
+  background-image: url(img/index/bosch.png);
+  margin-bottom: 20px;
+}
+
+.makita {
+  background-image: url(img/index/Makita.png);
+  margin-bottom: 20px;
+}
+
+.dewalt {
+  background-image: url(img/index/DeWALT.png);
+  margin-bottom: 20px;
+}
+
+.interskol {
+  background-image: url(img/index/Interskol.png);
+  margin-bottom: 20px;
+}
+
+.hitachi {
+  background-image: url(img/index/Hitachi.png);
+}
+
+.lg {
+  background-image: url(img/index/LG.png);
+}
+
+.aeg {
+  background-image: url(img/index/AEG.png);
+}
+
+.metabo {
+  background-image: url(img/index/Metabo.png);
+}
+ /*
+.manufacturer-list li {
+  display: flex;
+  width: 220px;
+  height: 145px;
+  border: solid 1px #eaeaea;
+}
+*/
 
 /*Индекс. Компания Техномарт и Контакты */
 .main-textblocks{
@@ -391,9 +741,6 @@ main {
   flex-direction: column;
 }
 
-.contacts img {
-}
-
 .transport-companies li {
   display: flex;
   align-items: center;
@@ -419,7 +766,7 @@ main {
   margin-bottom: 85px;
 }
 
-.about-company{
+.about-company {
   display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
@@ -428,7 +775,7 @@ main {
   background-color: #ee3643;
   border-radius: 3px;
 }
-  .write-us {
+.write-us {
   min-width: 300px;
   display: inline-block;
   font-size: 14px;
@@ -720,16 +1067,6 @@ main {
   width: 705px;
 }
 
-.tool-list li {
-  font-family: 'PTSans', 'Arial', sans-serif;
-  display: flex;
-  flex-direction: column;
-  width: 220px;
-  height: 318px;
-  border: solid 1px #e5e5e5;
-  margin-bottom: 20px;
-}
-
 .tool-name {
   font-size: 17px;
   font-family: 'PTSans', 'Arial', sans-serif;
@@ -753,6 +1090,7 @@ main {
 }
 
 .new-price {
+  position: relative;
   padding: 10px 30px 10px 36px;
   margin: auto auto 0 auto;
   background-color: #ee3643;
@@ -761,10 +1099,14 @@ main {
   font-size: 17px;
   line-height: 1.06;
   font-weight: bolder;
+  margin-bottom: 20px;
 }
 
 .new-price::after {
   position: absolute;
+  z-index: 10;
+  top: 0px;
+  left: 131px;
   display: block;
   content: "";
   border: 19px solid transparent;
