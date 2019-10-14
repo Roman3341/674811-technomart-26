@@ -616,6 +616,14 @@ main a{
   border-radius: 3px;
 }
 
+.buy-button:hover {
+  background-color: #5fbb2d;
+}
+
+.buy-button:active {
+  background-color: #518534;
+}
+
 .buy-button::before {
   position: absolute;
   top: 13px;
@@ -623,6 +631,11 @@ main a{
   content:url(img/index/icon-cart.svg);
   opacity: 0.3;
   margin-right: 17px;
+}
+
+.buy-button:hover::before,
+.buy-button:active::before {
+  opacity: 1;
 }
 
 .mark-button {
@@ -699,14 +712,26 @@ main a{
 .metabo {
   background-image: url(img/index/Metabo.png);
 }
- /*
-.manufacturer-list li {
-  display: flex;
-  width: 220px;
-  height: 145px;
-  border: solid 1px #eaeaea;
+
+/*Индекс. Преимущества*/
+
+.feauters {
+  background-color: #f4f7f9;
+  margin-bottom: 80px;
 }
-*/
+
+.feauters h2 {
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 36px;
+}
+
+.feauter-text {
+  font-size: 13px;
+  font-family: 'PTSans', 'Arial', sans-serif;
+  width: 403px;
+  margin-bottom: 28px;
+}
 
 /*Индекс. Компания Техномарт и Контакты */
 .main-textblocks{
@@ -849,6 +874,17 @@ main a{
   margin-right: 0;
 }
 
+.footer-services li:hover,
+.footer-navigation li:hover {
+  text-decoration: underline;
+}
+
+.footer-services li:active,
+.footer-navigation li:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
 /* Копирайт */
 .copyright {
   background-color: #293449;
@@ -874,7 +910,8 @@ main a{
   justify-content: center;
 }
 
-.network li {
+.network a {
+  display: inline-block;
   border-radius: 50%;
   width: 42px;
   height: 42px;
@@ -883,20 +920,34 @@ main a{
   margin-left: 3px;
 }
 
-.network img {
+.network a:hover,
+.network a:active {
+  background-color: #ee3643;
+}
+
+.network img {;
   transform: translateY(50%);
 }
-.network .vk {
-  transform: translateY(100%) translateX(-5%);
-}
-.copyright .adresses {
+
+.adresses {
   color:  #ffd180;
 }
 
+.adresses:hover {
+  text-decoration: underline;
+}
+
+.adresses:active {
+  text-decoration: none;
+  color: #ee3643;
+}
 .footer-contacts {
   display: flex;
   justify-content: space-around;
 }
+
+
+
 
 .form-back {
   width: 640px;
