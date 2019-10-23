@@ -92,13 +92,12 @@ label {
 
 .header-top-content {
   display: flex;
-  align-items: center;
 }
 
 .header-top .logo {
   display: block;
   font-size: 21px;
-  padding: 12px 62px;
+  padding: 9px 62px;
   box-shadow: 0px 5px 0 0 rgba(177, 5, 5, 0.74);
   background-color: #ee3643;
 }
@@ -107,38 +106,48 @@ label {
   position: relative;
 }
 
+
 .search {
   width: 270px;
   color: #ffffff;
   background-color: #293449;
   border: none;
-  padding: 14px 0px 15px 0;
+  padding: 11px 0px 12px 0;
+}
+
+.search:hover {
+  background-color: #212a3a;
 }
 
 .search:focus {
-  padding: 14px 0px 15px 0;
+  padding: 11px 0px 12px 0;
   width: 270px;
   border: none;
   color: black;
   font-size: 17px;
-  background-image: url(img/index/icon-search3.svg);
   background-size: 17px;
   background-color: #ffffff;
   background-position: 17px 12px;
   background-repeat: no-repeat;
+  outline: none;
 }
 
-.search-icon {
+ .search-icon {
   position: absolute;
   top: 12px;
   left: 17px;
   opacity: 0.3;
+  fill: #fff;
 }
 
-.search-icon:hover {
+.search-form:hover .search-icon {
   opacity: 1;
 }
 
+.search:focus ~ .search-icon {
+  fill: #ee3643;
+  opacity: 1;
+}
 .search::-webkit-input-placeholder { 
   color: #ffffff;
   opacity: 1; 
@@ -162,7 +171,7 @@ label {
 }
 
 .marker {
-  padding: 14px 28px;
+  padding: 11px 28px;
 }
 
 .marker::before {
@@ -172,7 +181,7 @@ label {
 }
 
 .cart{
-  padding: 14px 30px;
+  padding: 11px 30px 12px;
 }
 
 
@@ -202,9 +211,9 @@ label {
   opacity: 0.5;
 }
 
-.header-top .make-order {
+.make-order {
   display: inline-block;
-  padding: 14px 21px 15px;
+  padding: 12px 21px 11px;
   background-color: #63a63e;
 }
 
@@ -218,7 +227,7 @@ label {
 
 /* Индекс. Хэдер. Нижняя часть */
 .header-bottom{
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .header-bottom-wrapper {
@@ -239,6 +248,7 @@ h1 {
   display: flex;
   width: 270px;
   border: solid 3px #ffffff;
+  margin-bottom: 10px;
 
 }
 .contact-field::before {
@@ -258,13 +268,12 @@ h1 {
 }
 
 .adress {
-  text-align: center;
   font-size: 14px;
   color: #32425c;
   line-height: 1.71;
-  letter-spacing: -1px;
+  letter-spacing: -0.75px;
   width: 250px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .account {
@@ -273,6 +282,7 @@ h1 {
 
 .account li {
   display: flex;
+  align-items: flex-start;
 }
 
 
@@ -292,16 +302,13 @@ h1 {
   text-align: center;
   background-color: #ffffff;
   padding: 11px 24px; 
-  max-height: 45px;
   margin-right: 10px;
-  margin-bottom: auto;
 }
 
 .registration-button {
   font-size: 21px;
   text-align: center;
   background-color: #ffffff;
-  max-height: 45px;
   padding: 11px 24px; 
 }
 
@@ -319,8 +326,9 @@ h1 {
 
 .menu-list {
   display: flex;
-  justify-content: space-around;
-  box-shadow: inset 0px -5px 0 0 var(--dark);
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
   color: #ffffff;
 }
@@ -329,6 +337,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 29px;
   min-width: 127px;
   min-height: 60px;
 }
@@ -337,34 +346,23 @@ h1 {
   background-color: #1d2739;
 }
 
-/* Индекс.Мэин*/
-/*
-main a{
-  display: block;
-  font-size: 14px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 14px 40px;
-  border-radius: 5px;
+.menu-list a:active {
+  opacity: 0.5;
 }
-*/
+
+
+/* Индекс.Мэин*/
 
 /* Услуги */
 
 .main-services {
   display: flex;
   flex-wrap: wrap;
-  align-items: space-between;
+  align-items: flex-start;
   margin-bottom: 53px;
 }
 
-.materials h3,
-.tool h3,
-.delivery h3,
-.sales h3,
-.vehicle h3 {
+.services-item h3 {
   padding-left: 23px;
   padding-top: 26px;
   font-size: 24px;
@@ -372,33 +370,16 @@ main a{
   margin-bottom: 15px;
 }
 
-.materials,
-.tool,
-.delivery,
-.sales,
-.vehicle {
+.services-item {
   width: 300px;
   height: 123px;
   color: #ffffff;
-}
-.materials,
-.tool,
-.vehicle,
-.sales,
-.delivery {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  background-color: #ffbf47;
   margin-right: 20px;
   margin-bottom: 20px;
-}
-
-.vehicle,
-.sales,
-.delivery {
-  margin-right: 0;
 }
 
 .services-left{
@@ -407,11 +388,7 @@ main a{
   width: 640px;
 }
 
-.tool a,
-.materials a,
-.vehicle a,
-.sales a,
-.delivery a{
+.services-item a{
   display: block;
   width: 135px;
   font-size: 14px;
@@ -425,24 +402,16 @@ main a{
   margin-left: 25px;
 }
 
-.tool a:hover,
-.materials a:hover,
-.vehicle a:hover,
-.sales a:hover,
-.delivery a:hover{
+.services-item a:hover{
   background-color: rgba(0,0,0, 0.2);
 }
 
-.tool a:active,
-.materials a:active,
-.vehicle a:active,
-.sales a:active,
-.delivery a:active{
+.services-item a:active{
   background-color: rgba(0,0,0, 0.3);
 }
 
 
-.materials::before {
+.new-service::before {
   position: absolute;
   top:0;
   right: 0;
@@ -451,56 +420,12 @@ main a{
   height: 60px;
 }
 
-.materials img {
-  margin-top: 31px;
-  margin-right: 43px;
-}
-
-.tool img {
-  margin-top: 33px;
-  margin-right: 28px;
- 
-}
-
-.vehicle img {
-  margin-top: 31px;
-  margin-right: 31px;
-}
-
-.sales img {
-  margin-top: 26px;
-  margin-right: 45px;
-}
-
-.delivery img {
-  margin-top: 32px;
-  margin-right: 31px;
-}
-
-.slider-drills {
-  position: relative;
-}
-
-.first-slide-heading,
-.second-slide-heading {
+.services-icon  {
   position: absolute;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: bold;
-  top: 27px;
-  left: 24px;
-}
-
-.first-slide-text,
-.second-slide-text {
-  position: absolute;
-  font-size: 18px;
-  line-height: 24px;
-  color: #ffffff;
-  top: 65px;
-  left: 25px;
+  top: 26px;
+  right: 31px;
+  width: 78px;
+  height: 72px;
 }
 
 .services-right {
@@ -508,22 +433,97 @@ main a{
   flex-direction: column;
 }
 
-.tool {
+.services-item-blue {
   background-color: #3bbce3;
 }
 
-.vehicle {
+.services-item-purple {
   background-color: #dc91d8;
 }
 
-.sales {
+.services-item-green {
   background-color: #8ed78f;
 }
 
-.delivery {
+.services-item-yellow {
   background-color: #ffbf47;
 }
 
+.services-item-purple,
+.services-item-green,
+.services-item-yellow:last-child {
+  margin-right: 0;
+}
+
+.services-item-yellow:last-child {
+  margin-bottom: 0;
+}
+
+/*Индекс.Слайдер*/
+
+button {
+  border: 0;
+}
+
+.slider {
+  position: relative;
+  width: 620px;
+  height: 266px;
+}
+
+.slider-item {
+  position: relative;
+}
+
+.slider-item a {
+  position: absolute;
+  display: inline-block;
+  bottom: 22px;
+  left: 25px;
+  min-width: 195px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 10px 45px 10px 49px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.slider-button {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.slider-button-left {
+  left: 25px;
+}
+
+.slider-button-right {
+  right: 20px;
+}
+
+.slider-header {
+  position: absolute;
+  top: 27px;
+  left: 24px;
+}
+
+.slider-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.slider-text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
 /* Популярные товары */
 
 .popular-products,
@@ -577,6 +577,7 @@ main a{
 
 .tool-list-index li,
 .tool-list li {
+  position: relative;
   font-family: 'PTSans', 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
@@ -593,6 +594,7 @@ main a{
 
 .item-hover {
   position: absolute;
+  left: -9999px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -600,7 +602,15 @@ main a{
   margin: 1px;
   height: 164px;
   background-color: #ffffff;
+  opacity: 0;
   z-index: 10;
+  transition: opacity 0.2s;
+}
+
+.tool-list-index li:hover .item-hover,
+.tool-list li:hover .item-hover {
+  left: 0;
+  opacity: 1;
 }
 
 .buy-button {
@@ -648,6 +658,14 @@ main a{
   margin: auto;
   border: solid 3px #63a63e;
   border-radius: 3px;
+}
+
+.mark-button:hover {
+  border-color: #32425c;
+}
+
+.mark-button:active {
+  opacity: 0.3;
 }
 
 /*Индекс. Популярные производители*/
@@ -720,17 +738,116 @@ main a{
   margin-bottom: 80px;
 }
 
+
+.feauters-list::before{
+  position: absolute;
+  content: url(img/index/shadow.png);
+  width: 10px;
+  height: 279px;
+  top: -46px;
+  right: 0;
+  z-index: 10;
+}
+
 .feauters h2 {
   font-size: 30px;
   line-height: 30px;
   margin-bottom: 36px;
 }
 
+.feauters-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  width: 240px;
+  margin-right: 80px;
+}
+
+.feauters-list a{
+  display: block;
+  font-size: 21px;
+  line-height: 30px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  padding-left: 22px;
+  min-width: 240px;
+  margin-bottom: 1px;
+  background-color: #32425c;
+  color: #ffffff;
+  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+.feauters-list a:hover{
+  background-color: #ffffff;
+  color: #32425c;
+  box-shadow: 0px 1px 0 0 white, inset 0px 1px 0 0 white;
+}
+
+.feauters-item {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.feauters-discription li {
+  position: relative;
+  display: flex;
+  width: 608px;
+  height: 300px;
+  flex-direction: column;
+}
+
+.feauters-discription img {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 2;
+}
+
+.active-img {
+  top: 0;
+}
+
+.feauters-discription p{
+  display: inline-block;
+}
+
+
+.feauter-title {
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+  margin-bottom: 34px;
+  text-transform: uppercase;
+}
+
 .feauter-text {
   font-size: 13px;
   font-family: 'PTSans', 'Arial', sans-serif;
-  width: 403px;
+  line-height: 24px;
+  width: 398px;
   margin-bottom: 28px;
+  letter-spacing: -0.4px;
+}
+
+.guarantee {
+  width: 379px;
+}
+
+.credit {
+  width: 279px;
+}
+
+.credit-request {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 45px;
+  color: #ffffff;
+  background-color: #ee3643; 
+  border-radius: 3px;
+  text-transform: uppercase;
+  align-self: flex-start;
 }
 
 /*Индекс. Компания Техномарт и Контакты */
@@ -766,6 +883,14 @@ main a{
   flex-direction: column;
 }
 
+.contacts img {
+  margin-bottom: 50px;
+}
+
+.transport-companies {
+  margin-bottom: 35px;
+}
+
 .transport-companies li {
   display: flex;
   align-items: center;
@@ -792,7 +917,8 @@ main a{
 }
 
 .about-company {
-  display: inline-block;
+  display: flex;
+  margin-right: auto;
   font-size: 14px;
   text-transform: uppercase;
   padding: 10px 40px;
