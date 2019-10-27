@@ -219,12 +219,12 @@
         </p>
         <div class="feauters-item">
         <ul class="feauters-list">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Кредит</a></li>
+          <li class="feauters-list-item " ><a class="feauters-list-link feauters-list-link-active"  href="#" data-link="delivery">Доставка</a></li>
+          <li class="feauters-list-item" ><a class="feauters-list-link"  href="#" data-link="guarantee">Гарантия</a></li>
+          <li class="feauters-list-item" ><a class="feauters-list-link"  href="#" data-link="credit">Кредит</a></li>
         </ul>
         <ul class="feauters-discription">
-          <li>
+          <li class="feauters-discription-item feauters-discription-item-active" id="delivery" >
             <span class="feauter-title">Доставка</span>
             <p class="feauter-text delivery">Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!<br>
@@ -233,7 +233,7 @@
             </p>
             <img class="active-img" src="img/index/truck.png" alt="Картинка доставки" width="468" height="281">
           </li>
-          <li> 
+          <li class="feauters-discription-item" id="guarantee"> 
             <span class="feauter-title">Гарантия</span>
              <p class="feauter-text guarantee">
                 Если купленный у нас товар поломается или заискрит,<br>
@@ -244,7 +244,8 @@
             </p>
              <img src="img/index/guarantee.png" alt="Картинка гарантии" width="389" height="283">
           </li>
-          <li><span class="feauter-title">Кредит</span>            
+          <li class="feauters-discription-item" id="credit">
+            <span class="feauter-title">Кредит</span>            
             <p class="feauter-text credit"> 
                 Залезть в долговую яму стало проще! <br>
                 Кредитные консультанты придут вам на помощь.
@@ -361,6 +362,7 @@
 
     <button class="button-close-mail" type="button" aria-label="Закрыть"></button>
   </section>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

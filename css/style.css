@@ -491,6 +491,14 @@ button {
   border-radius: 3px;
 }
 
+.slider-item a:hover {
+  background-color: #ca2c37;
+}
+
+.slider-item a:active {
+background-color:#ba2732;
+}
+
 .slider-button {
   position: absolute;
   top:50%;
@@ -578,10 +586,10 @@ button {
 .tool-list-index li,
 .tool-list li {
   position: relative;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 218px;
   height: 318px;
   border: solid 1px #e5e5e5;
   margin-bottom: 20px;
@@ -598,7 +606,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  width: 217px;
+  width: 214px;
   margin: 1px;
   height: 164px;
   background-color: #ffffff;
@@ -736,6 +744,7 @@ button {
 .feauters {
   background-color: #f4f7f9;
   margin-bottom: 80px;
+  padding-top: 68px;
 }
 
 
@@ -764,7 +773,7 @@ button {
   margin-right: 80px;
 }
 
-.feauters-list a{
+.feauters-list-link{
   display: block;
   font-size: 21px;
   line-height: 30px;
@@ -776,6 +785,12 @@ button {
   background-color: #32425c;
   color: #ffffff;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+.feauters-list-link-active {
+  background-color: #ffffff;
+  color: #32425c;
+  box-shadow: 0px 1px 0 0 white, inset 0px 1px 0 0 white;
 }
 
 .feauters-list a:hover{
@@ -790,12 +805,16 @@ button {
   flex-wrap: wrap;
 }
 
-.feauters-discription li {
+.feauters-discription-item {
   position: relative;
-  display: flex;
+  display: none;
   width: 608px;
   height: 300px;
   flex-direction: column;
+}
+
+.feauters-discription-item-active {
+  display: flex;
 }
 
 .feauters-discription img {
@@ -824,11 +843,10 @@ button {
 
 .feauter-text {
   font-size: 13px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   line-height: 24px;
   width: 398px;
-  margin-bottom: 28px;
-  letter-spacing: -0.4px;
+  margin-bottom: 74px;
 }
 
 .guarantee {
@@ -1246,10 +1264,9 @@ button {
 
 .tool-name {
   font-size: 17px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: bold;
-  max-width: 200px;
-  margin: 0 auto;
+  margin: 0 32px;
   text-align: center;
 }
 
@@ -1261,7 +1278,7 @@ button {
   margin-right: auto;
   margin-bottom: 15px;
   text-decoration: line-through;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
   font-weight: bold;
 }
@@ -1272,7 +1289,7 @@ button {
   margin: auto auto 0 auto;
   background-color: #ee3643;
   color: #ffffff;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 1.06;
   font-weight: bolder;
