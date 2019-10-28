@@ -786,18 +786,19 @@ background-color:#ba2732;
   color: #ffffff;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 }
+.feauters-list-link:hover{
+  background-color: #293449;
+  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
 
-.feauters-list-link-active {
+.feauters-list-link-active,
+.feauters-list-link-active:hover{
   background-color: #ffffff;
   color: #32425c;
   box-shadow: 0px 1px 0 0 white, inset 0px 1px 0 0 white;
 }
 
-.feauters-list a:hover{
-  background-color: #ffffff;
-  color: #32425c;
-  box-shadow: 0px 1px 0 0 white, inset 0px 1px 0 0 white;
-}
+
 
 .feauters-item {
   display: flex;
@@ -1094,21 +1095,27 @@ background-color:#ba2732;
 
 
 .form-back {
-  width: 640px;
-  height: 470px;
+  position: relative;
+  width: 620px;
+  height: 430px;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border: 1px solid red;
   border-top: 7px solid red;
   margin-top: 40px; /*Временно*/
   margin-left: 40px; /*Временно*/
+  margin-bottom: 20px;
+}
+
+.form-back-container {
+  width: 460px;
 }
 
 .form-fields {
   display: flex;
-  margin-top: 55px;
+  margin-top: 41px;
   margin-left: 80px;
   margin-right: 80px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .name-field {
@@ -1147,28 +1154,32 @@ background-color:#ba2732;
 .mail-form {
   display: flex;
   flex-direction: column;
+  margin-right: 80px;
   margin-left: 80px;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 }
+
 
 .mail-label {
   margin-bottom: 13px;
 }
 
 .mail-textarea {
-  width: 460px;
+  width: 459px;
   height: 114px;
   border: solid 2px #dee3e4;
-  background-color: var(--white);
+  resize: none;
 }
 
 .send-mail {
   font-family: 'Cuprum';
   text-transform: uppercase;
   background-color: #ee3643;
-  padding: 14px 198px;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 11px 198px;
   font-size: 14px;
-  margin: 37px auto;
+  margin: 37px 80px;
 }
 
 .button-field {
@@ -1178,9 +1189,87 @@ background-color:#ba2732;
   background-color: #f4f4f4;
 }
 
-.button-close-mail {
+.button-close-mail::before,
+.map-modal::before,
+.cart-modal::before {
+  content: url(img/index/form-close.svg);
+  fill: #ee3643;
+  top: 9px;
+  right: 9px;
+  width: 21px;
+  height: 21px;
   position: absolute;
+  z-index: 10;
 }
+
+.map-modal {
+  position: relative;
+  width: 940px;
+  height: 446px;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75) ;
+  margin-bottom: 30px; /*временно*/
+  margin-left: 30px; /*временно*/
+}
+
+.cart-modal {
+  position: relative;
+  border: 1px solid red;
+  border-top: 7px solid red;
+  width: 620px;
+  box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
+  margin-bottom: 30px; /*временно*/
+  margin-left: 30px; /*временно*/
+}
+
+.order-text {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 30px;
+  margin: 75px 125px 68px 177px;
+}
+
+.cart-modal::after {
+  position: absolute;
+  content: url(img/index/modal-check.svg);
+  top: 88px;
+  left: 81px;
+  width: 66px;
+  height: 66px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.cart-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 112px;
+  background-color: #f1f1f1;
+}
+
+.cart-modal-make-order {
+  font-family: 'Cuprum';
+  text-transform: uppercase;
+  background-color: #ee3643;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 11px 61px;
+  font-size: 14px;
+  margin: auto 0;
+  margin-left: 80px;
+}
+
+.cart-modal-continue {
+  font-family: 'Cuprum';
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 11px 46px;
+  font-size: 14px;
+  margin: auto 0;
+  margin-right: 80px;
+}
+
 /* CATALOG */
 
 .account-login {
