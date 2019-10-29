@@ -71,11 +71,12 @@ label {
 
 .visually-hidden {
   position: absolute;
-  clip: rect( 0 0 0 0);
+  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
 }
+
 /*Индекс. Хэдер. Верхняя часть */
 .header {
   font-size: 17px;
@@ -86,7 +87,7 @@ label {
 
 .header-top {
   min-height: 42px;
-  background-color:#293449;
+  background-color: #293449;
   color: #ffffff;
 }
 
@@ -132,7 +133,7 @@ label {
   outline: none;
 }
 
- .search-icon {
+.search-icon {
   position: absolute;
   top: 12px;
   left: 17px;
@@ -144,26 +145,30 @@ label {
   opacity: 1;
 }
 
-.search:focus ~ .search-icon {
+.search:focus~.search-icon {
   fill: #ee3643;
   opacity: 1;
 }
-.search::-webkit-input-placeholder { 
+
+.search::-webkit-input-placeholder {
   color: #ffffff;
-  opacity: 1; 
+  opacity: 1;
 }
-.search:-ms-input-placeholder { 
+
+.search:-ms-input-placeholder {
   color: #ffffff;
-  opacity: 1;  
+  opacity: 1;
 }
-.search::-ms-input-placeholder { 
+
+.search::-ms-input-placeholder {
   color: #ffffff;
-  opacity: 1; 
+  opacity: 1;
 }
-.search::placeholder { 
+
+.search::placeholder {
   color: #ffffff;
-  opacity: 1; 
-} 
+  opacity: 1;
+}
 
 .search[placeholder="Поиск:"] {
   padding-left: 50px;
@@ -175,18 +180,18 @@ label {
 }
 
 .marker::before {
-  content:url(img/index/icon-bookmark.svg);
+  content: url(img/index/icon-bookmark.svg);
   opacity: 0.3;
   margin-right: 11px;
 }
 
-.cart{
+.cart {
   padding: 11px 30px 12px;
 }
 
 
 .cart::before {
-  content:url(img/index/icon-cart.svg);
+  content: url(img/index/icon-cart.svg);
   opacity: 0.3;
   margin-right: 17px;
 }
@@ -202,12 +207,12 @@ label {
 }
 
 .cart:active,
-.marker:active{
+.marker:active {
   background-color: #161d29;
 }
 
 .cart:active,
-.marker:active{
+.marker:active {
   opacity: 0.5;
 }
 
@@ -226,7 +231,7 @@ label {
 }
 
 /* Индекс. Хэдер. Нижняя часть */
-.header-bottom{
+.header-bottom {
   padding: 40px 0;
 }
 
@@ -251,6 +256,7 @@ h1 {
   margin-bottom: 10px;
 
 }
+
 .contact-field::before {
   content: url(img/index/icon-phone.svg);
   width: 19px;
@@ -260,6 +266,7 @@ h1 {
   margin-right: auto;
   margin-left: 15px;
 }
+
 .call-number {
   font-size: 21px;
   color: #ee3643;
@@ -297,11 +304,11 @@ h1 {
   content: url(img/index/icon-login.svg);
 }
 
-.enter-button{
+.enter-button {
   font-size: 21px;
   text-align: center;
   background-color: #ffffff;
-  padding: 11px 24px; 
+  padding: 11px 24px;
   margin-right: 10px;
 }
 
@@ -309,7 +316,7 @@ h1 {
   font-size: 21px;
   text-align: center;
   background-color: #ffffff;
-  padding: 11px 24px; 
+  padding: 11px 24px;
 }
 
 .enter-button:hover,
@@ -322,6 +329,7 @@ h1 {
   color: black;
   opacity: 0.3;
 }
+
 /* Хэдер. Навигация */
 
 .menu-list {
@@ -333,7 +341,7 @@ h1 {
   color: #ffffff;
 }
 
-.menu-list a{  
+.menu-list a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,45 +390,44 @@ h1 {
   margin-bottom: 20px;
 }
 
-.services-left{
+.services-left {
   display: flex;
   flex-wrap: wrap;
   width: 640px;
 }
 
-.services-item a{
+.services-item a {
   display: block;
   width: 135px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  vertical-align: center;
   text-align: center;
   padding: 14px 0;
-  background-color: rgba(0,0,0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   margin-left: 25px;
 }
 
-.services-item a:hover{
-  background-color: rgba(0,0,0, 0.2);
+.services-item a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.services-item a:active{
-  background-color: rgba(0,0,0, 0.3);
+.services-item a:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 
-.new-service::before {
+.new::before {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   content: url(img/index/new-flag.png);
   width: 60px;
   height: 60px;
 }
 
-.services-icon  {
+.services-icon {
   position: absolute;
   top: 26px;
   right: 31px;
@@ -496,12 +503,12 @@ button {
 }
 
 .slider-item a:active {
-background-color:#ba2732;
+  background-color: #ba2732;
 }
 
 .slider-button {
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -532,6 +539,7 @@ background-color:#ba2732;
   line-height: 24px;
   color: #ffffff;
 }
+
 /* Популярные товары */
 
 .popular-products,
@@ -557,7 +565,7 @@ background-color:#ba2732;
   line-height: 18px;
   padding: 13px 55px;
   color: #ffffff;
-  background-color: #ee3643; 
+  background-color: #ee3643;
   margin: auto 24px auto auto;
   border-radius: 3px;
   text-transform: uppercase;
@@ -646,7 +654,7 @@ background-color:#ba2732;
   position: absolute;
   top: 13px;
   left: 12px;
-  content:url(img/index/icon-cart.svg);
+  content: url(img/index/icon-cart.svg);
   opacity: 0.3;
   margin-right: 17px;
 }
@@ -748,7 +756,7 @@ background-color:#ba2732;
 }
 
 
-.feauters-list::before{
+.feauters-list::before {
   position: absolute;
   content: url(img/index/shadow.png);
   width: 10px;
@@ -773,7 +781,7 @@ background-color:#ba2732;
   margin-right: 80px;
 }
 
-.feauters-list-link{
+.feauters-list-link {
   display: block;
   font-size: 21px;
   line-height: 30px;
@@ -786,13 +794,14 @@ background-color:#ba2732;
   color: #ffffff;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 }
-.feauters-list-link:hover{
+
+.feauters-list-link:hover {
   background-color: #293449;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 }
 
 .feauters-list-link-active,
-.feauters-list-link-active:hover{
+.feauters-list-link-active:hover {
   background-color: #ffffff;
   color: #32425c;
   box-shadow: 0px 1px 0 0 white, inset 0px 1px 0 0 white;
@@ -829,7 +838,7 @@ background-color:#ba2732;
   top: 0;
 }
 
-.feauters-discription p{
+.feauters-discription p {
   display: inline-block;
 }
 
@@ -863,16 +872,16 @@ background-color:#ba2732;
   line-height: 18px;
   padding: 10px 45px;
   color: #ffffff;
-  background-color: #ee3643; 
+  background-color: #ee3643;
   border-radius: 3px;
   text-transform: uppercase;
   align-self: flex-start;
 }
 
 /*Индекс. Компания Техномарт и Контакты */
-.main-textblocks{
+.main-textblocks {
   display: flex;
-  justify-content:  space-between;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 
@@ -891,11 +900,12 @@ background-color:#ba2732;
 
 .technomart-company p,
 .contacts p {
-  font-family: 'PT Sans','Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 1.8;
   margin-bottom: 35px;
 }
+
 .contacts {
   display: flex;
   width: 300px;
@@ -920,8 +930,8 @@ background-color:#ba2732;
   margin-bottom: 0;
 }
 
-.transport-companies li::before{
-  content:"";
+.transport-companies li::before {
+  content: "";
   display: block;
   width: 25px;
   height: 2px;
@@ -945,6 +955,7 @@ background-color:#ba2732;
   background-color: #ee3643;
   border-radius: 3px;
 }
+
 .write-us {
   min-width: 300px;
   display: inline-block;
@@ -962,7 +973,7 @@ background-color:#ba2732;
   background-color: #32425c;
 }
 
-.footer-top{
+.footer-top {
   display: flex;
   justify-content: space-between;
   color: #ffffff;
@@ -998,7 +1009,7 @@ background-color:#ba2732;
   margin-right: 60px;
 }
 
-.footer-navigation li:last-child{
+.footer-navigation li:last-child {
   margin-right: 0;
 }
 
@@ -1015,7 +1026,7 @@ background-color:#ba2732;
   margin-right: 60px;
 }
 
-.footer-services li:last-child{
+.footer-services li:last-child {
   margin-right: 0;
 }
 
@@ -1042,6 +1053,7 @@ background-color:#ba2732;
   padding-top: 40px;
   padding-bottom: 35px;
 }
+
 .copyright p {
   font-size: 16px;
 }
@@ -1070,12 +1082,12 @@ background-color:#ba2732;
   background-color: #ee3643;
 }
 
-.network img {;
+.network img {
   transform: translateY(50%);
 }
 
 .adresses {
-  color:  #ffd180;
+  color: #ffd180;
 }
 
 .adresses:hover {
@@ -1086,24 +1098,23 @@ background-color:#ba2732;
   text-decoration: none;
   color: #ee3643;
 }
+
 .footer-contacts {
   display: flex;
   justify-content: space-around;
 }
 
 
-
-
+/*формы*/
 .form-back {
-  position: relative;
+  display: none;
   width: 620px;
   height: 430px;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border: 1px solid red;
   border-top: 7px solid red;
-  margin-top: 40px; /*Временно*/
-  margin-left: 40px; /*Временно*/
   margin-bottom: 20px;
+  z-index: 10;
 }
 
 .form-back-container {
@@ -1128,7 +1139,7 @@ background-color:#ba2732;
   margin-bottom: 11px;
 }
 
-.name-field input{
+.name-field input {
   width: 220px;
   height: 38px;
   border: solid 2px #dee3e4;
@@ -1144,7 +1155,7 @@ background-color:#ba2732;
   margin-bottom: 11px;
 }
 
-.email-field input{
+.email-field input {
   width: 220px;
   height: 38px;
   border: solid 2px #dee3e4;
@@ -1182,6 +1193,14 @@ background-color:#ba2732;
   margin: 37px 80px;
 }
 
+.send-mail:hover {
+  background-color: #ca2c37;
+}
+
+.send-mail:active {
+  background-color: #ba2732;
+}
+
 .button-field {
   display: block;
   text-align: center;
@@ -1189,11 +1208,7 @@ background-color:#ba2732;
   background-color: #f4f4f4;
 }
 
-.button-close-mail::before,
-.map-modal::before,
-.cart-modal::before {
-  content: url(img/index/form-close.svg);
-  fill: #ee3643;
+.close-button {
   top: 9px;
   right: 9px;
   width: 21px;
@@ -1202,23 +1217,31 @@ background-color:#ba2732;
   z-index: 10;
 }
 
+.close-button svg {
+  fill: #ee3643;
+}
+
+.close-button svg:hover {
+  fill: #ca2c37;
+}
+
+.close-button svg:active {
+  fill: #ba2732;
+}
+
 .map-modal {
-  position: relative;
+  display: none;
   width: 940px;
   height: 446px;
-  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75) ;
-  margin-bottom: 30px; /*временно*/
-  margin-left: 30px; /*временно*/
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .cart-modal {
-  position: relative;
+  display: none;
   border: 1px solid red;
   border-top: 7px solid red;
   width: 620px;
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
-  margin-bottom: 30px; /*временно*/
-  margin-left: 30px; /*временно*/
 }
 
 .order-text {
@@ -1259,6 +1282,14 @@ background-color:#ba2732;
   margin-left: 80px;
 }
 
+.cart-modal-make-order:hover {
+  background-color: #ca2c37;
+}
+
+.cart-modal-make-order:active {
+  background-color: #ba2732;
+}
+
 .cart-modal-continue {
   font-family: 'Cuprum';
   text-transform: uppercase;
@@ -1268,6 +1299,24 @@ background-color:#ba2732;
   font-size: 14px;
   margin: auto 0;
   margin-right: 80px;
+}
+
+.cart-modal-continue:hover {
+  opacity: 0.7;
+}
+
+.cart-modal-continue:active {
+  opacity: 0.6;
+}
+
+.modal-show {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #ffffff;
+  z-index: 20;
 }
 
 /* CATALOG */
@@ -1311,7 +1360,7 @@ background-color:#ba2732;
 
 .personal-account {
   margin-left: 50px;
-  margin-right:auto;
+  margin-right: auto;
 }
 
 .breadcrumbs {
@@ -1324,31 +1373,138 @@ background-color:#ba2732;
   font-size: 13px;
 }
 
-.breadcrumbs a::after{
+.breadcrumbs a::after {
   content: url(img/index/icon-right-small.svg);
   margin: auto 15px;
-}
-.filters-cards {
-  display: flex;
-  justify-content: space-between;
-  width: 940px;
-  margin-bottom: 52px;
 }
 
 .drill {
   font-size: 30px;
-  background-color: #f4f7f9;
+  color: #32425c;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
   margin-bottom: 20px;
+  background-color: #f2f6f8;
+  ;
+
+}
+
+/*Сортировка*/
+.sorting {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  height: 38px;
+  background-color: #f7f3ec;
+  margin-bottom: 21px;
+}
+
+.filters-title,
+.sorting-title {
+  text-transform: uppercase;
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-size: 13px;
+  line-height: 18px;  
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 19px;
+}
+
+.sorting-list {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 113px;
+}
+
+.sorting-list li {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 65px;
+}
+
+.sorting-list a{
+  text-transform: uppercase;
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-size: 13px;
+  line-height: 18px;  
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #ee3643;
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.sorting-list .sorting-active {
+  color: #ee3643;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.sorting-to-highest{
+  position: absolute;
+  top: 50%;
+  right: 49px;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-top: none;
+  border-bottom: 11px solid #ee3643;
+  
+}
+
+.sorting-to-lowest {
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-bottom: none;
+  border-top: 11px solid #c5c5c5;
+  
+}
+/*Фильтры*/
+.filters {
+  display: block;
+  width: 220px;
+  margin-right: 20px;
+}
+
+.filters-title {
+  display: inline-block;
+  background-color: #f7f3ec;
+  padding: 10px 152px 10px 18px;
+  margin-left: 0;
+  margin-bottom: 21px;
+}
+ .price-label {
+   font-size: 17px;
+   font-family: 'PT Sans', 'Arial', 'sans-serif';
+   line-height: 30px;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-bottom: 21px;
+ }
+
+.price-foutpue{
+  width: 95px;
+  height: 38px;
+  background-color: #f7f3ec;
+}
+
+ .price-filter-range {
+
+ }
+/*Карточки товара*/
+.tools {
+  display: flex;
+  margin-bottom: 53px;
 }
 
 .tool-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 705px;
+  width: 700px;
 }
 
 .tool-name {
@@ -1360,7 +1516,7 @@ background-color:#ba2732;
 }
 
 .old-price {
-  
+
   color: #999999;
   margin-top: 15px;
   margin-left: auto;
@@ -1382,7 +1538,7 @@ background-color:#ba2732;
   font-size: 17px;
   line-height: 1.06;
   font-weight: bolder;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .new-price::after {
@@ -1398,11 +1554,73 @@ background-color:#ba2732;
 
 .tool-list li:nth-child(7),
 .tool-list li:nth-child(8),
-.tool-list li:nth-child(9){
+.tool-list li:nth-child(9) {
   margin-bottom: 0px;
+}
+
+/*Пагинация*/
+.catalog-list {
+  display: flex;
+  width: 284px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  margin-left: 242px;
+}
+
+.catalog-list a {
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  display: block;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  background-color: #ffffff;
+  border: solid 1px #e5e5e5;
+  border-radius: 3px;
+}
+
+.catalog-list .pagination-next-page {
+  text-transform: uppercase;
+  width: 140px;
+}
+.catalog-list a:hover {
+  background-color: #ee3643;
+  color: #ffffff;
+}
+
+.catalog-list a:active {
+  background-color: #ba2732;
+}
+
+.catalog-list .pagination-active {
+  background-color: #ee3643;
+  color: #ffffff;
+}
+
+
+
+
+
+/*Несколько слов о перфораторах*/
+
+.some-words {
+  padding-top: 59px;
+  padding-bottom: 64px;
 }
 
 .some-words-wrapper {
   background-color: #f4f7f9;
 }
 
+.some-words h2 {
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 36px;
+  text-transform: uppercase;
+}
+
+.some-words p {
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-size: 13px;
+  line-height: 24px;
+}
