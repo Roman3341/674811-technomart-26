@@ -19,7 +19,7 @@
       <div class="container header-top-content">
         <h3 class="visually-hidden">Верхняя часть хэдера</h3>
         <a href="index.html" class="logo" aria-label="Лого">ТЕХНОМАРТ</a>
-        <form action="" method="GET" class="search-form">
+        <form action="https://echo.htmlacademy.ru" method="GET" class="search-form">
           <label for="search-field" class="search-label">
             <input type="search" class="search" id="search-field" name="search-query" placeholder="Поиск:">
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" class="search-icon">
@@ -91,7 +91,7 @@
     <section class="container">
       <h3 class="visually-hidden">Хлебные крошки</h3>
       <ul class="breadcrumbs">
-        <li><a href="index.html"><img src="img/svg/icon-home.svg" alt="Иконка домашней страницы"></a></li>
+        <li><a href="index.html"><img src="img/svg/icon-home.svg" alt="Иконка домашней страницы" width="14" height="12"></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструменты</a></li>
         <li>Перфораторы</li>
@@ -103,28 +103,29 @@
       <h2 class="drill container">Перфораторы</h2>
 
       <div class="tools container">
+
         <h3 class="visually-hidden">Карточки товара</h3>
 
         <section class="filters">
           <h2 class="visually-hidden">Фильтры</h2>
           <span class="filters-title">Фильтр:</span>
-          <form action="">
-              <fieldset class="filters-fieldset">
-                  <legend class="filters-legend">цена:</legend>
-                  <div class="range-filter">
-                    <div class="range-controls">
-                      <div class="scale">
-                        <div class="bar"></div>
-                      </div>
-                      <div class="toggle toggle-min"></div>
-                      <div class="toggle toggle-max"></div>
-                    </div>
-                    <div class="price-controls">
-                      <label class="min-price"><input name="min-price" type="text" value="0"></label>
-                      <label class="max-price"><input name="max-price" type="text" value="30000"></label>
-                    </div>
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <fieldset class="filters-fieldset">
+              <legend class="filters-legend">цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
                   </div>
-                </fieldset>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price"><input name="min-price" type="text" value="0"></label>
+                  <label class="max-price"><input name="max-price" type="text" value="30000"></label>
+                </div>
+              </div>
+            </fieldset>
 
             <!-- Чекбокс -->
             <fieldset class="filters-fieldset">
@@ -152,24 +153,26 @@
                   <label for="hitachi" class="checkbox-label">hitachi</label>
                 </li>
               </ul>
-              <ul class="checkbox-list">
             </fieldset>
+
             <fieldset class="radio-field filters-fieldset">
+              <legend class="filters-legend">Питание:</legend>
               <ul class="radio-list">
-                <legend class="filters-legend">Питание:</legend>
                 <li>
-                <input type="radio" name="radio-choice-supply" value="rechargeable" id="rechargeable-supply" class="visually-hidden" checked>
-                <label for="rechargeable-supply" class="radio-label">Аккумуляторные</label>
+                  <input type="radio" name="radio-choice-supply" value="rechargeable" id="rechargeable-supply">
+                    class="visually-hidden" checked>
+                  <label for="rechargeable-supply" class="radio-label">Аккумуляторные</label>
                 </li>
                 <li>
-                <input type="radio" name="radio-choice-supply" value="power-grid" id="power-grid-supply" class="visually-hidden">
-                <label for="power-grid-supply" class="radio-label">Сетевые</label>
+                  <input type="radio" name="radio-choice-supply" value="power-grid" id="power-grid-supply"
+                    class="visually-hidden">
+                  <label for="power-grid-supply" class="radio-label">Сетевые</label>
                 </li>
               </ul>
             </fieldset>
             <input type="submit" value="Показать" name="show-filter" class="filter-button">
           </form>
-          <button></button>
+
         </section>
 
         <div>
@@ -222,6 +225,7 @@
                   <a href="#" class="buy-button"> Купить</a>
                   <a href="#" class="mark-button">В закладки</a>
                 </div>
+              </div>
             </li>
             <li class="new">
               <a href="#">
@@ -260,6 +264,7 @@
                   <a href="#" class="buy-button"> Купить</a>
                   <a href="#" class="mark-button">В закладки</a>
                 </div>
+              </div>
             </li>
             <li>
               <a href="#">
@@ -298,6 +303,7 @@
                   <a href="#" class="buy-button"> Купить</a>
                   <a href="#" class="mark-button">В закладки</a>
                 </div>
+              </div>
             </li>
             <li>
               <a href="#">
@@ -312,8 +318,9 @@
             </li>
           </ul>
         </div>
+      </div>
     </section>
-    </div>
+
     <section class="pagination container">
       <h2 class="visually-hidden">Нумерация страниц каталога</h2>
       <ul class="catalog-list">
@@ -375,10 +382,10 @@
         </div>
         <div class="footer-col">
           <ul class="network">
-            <li><a href="#"><img src="img/svg/icon-vk.svg" alt="Иконка ВК" class="vk" width="21px" height="21px"></a>
+            <li><a href="#"><img src="img/svg/icon-vk.svg" alt="Иконка ВК" class="vk" width="21" height="21"></a>
             </li>
-            <li><a href="#"><img src="img/svg/icon-fb.svg" alt="Иконка Фэйсбук" width="21px" height="21px"></a></li>
-            <li><a href="#"><img src="img/svg/icon-insta.svg" alt="Иконка инстаграм" width="21px" height="21px"></a>
+            <li><a href="#"><img src="img/svg/icon-fb.svg" alt="Иконка Фэйсбук" width="21" height="21"></a></li>
+            <li><a href="#"><img src="img/svg/icon-insta.svg" alt="Иконка инстаграм" width="21" height="21"></a>
             </li>
           </ul>
         </div>
