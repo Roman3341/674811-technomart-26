@@ -18,6 +18,7 @@ body {
   font-family: 'Cuprum', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-smoothing: grayscale;
   color: black;
 }
 
@@ -55,12 +56,31 @@ a {
 
 img {
   display: inline-block;
+  vertical-align: middle;
   max-width: 100%;
   max-height: 100%;
 }
 
 label {
   cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .container {
@@ -101,6 +121,7 @@ label {
   padding: 9px 62px;
   box-shadow: 0px 5px 0 0 rgba(177, 5, 5, 0.74);
   background-color: #ee3643;
+  text-transform: uppercase;
 }
 
 .search-form {
@@ -156,11 +177,6 @@ label {
 }
 
 .search:-ms-input-placeholder {
-  color: #ffffff;
-  opacity: 1;
-}
-
-.search::-ms-input-placeholder {
   color: #ffffff;
   opacity: 1;
 }
@@ -230,6 +246,7 @@ label {
 
 .make-order {
   display: inline-block;
+  vertical-align: middle;
   padding: 12px 21px 11px;
   background-color: #63a63e;
 }
@@ -496,13 +513,20 @@ button {
   height: 266px;
 }
 
-.slider-item {
+.slider-item-first,
+.slider-item-second {
+  display: none;
   position: relative;
 }
 
+.slider-show {
+  display: block;
+  transition: 3s;
+}
 .open-catalog {
   position: absolute;
   display: inline-block;
+  vertical-align: middle;
   bottom: 22px;
   left: 25px;
   min-width: 195px;
@@ -528,6 +552,7 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  padding: 0;
 }
 
 .slider-button-left {
@@ -735,34 +760,34 @@ button {
 }
 
 .makita {
-  background-image: url(img/index/Makita.png);
+  background-image: url(img/index/makita.png);
   margin-bottom: 20px;
 }
 
 .dewalt {
-  background-image: url(img/index/DeWALT.png);
+  background-image: url(img/index/dewalt.png);
   margin-bottom: 20px;
 }
 
 .interskol {
-  background-image: url(img/index/Interskol.png);
+  background-image: url(img/index/interskol.png);
   margin-bottom: 20px;
 }
 
 .hitachi {
-  background-image: url(img/index/Hitachi.png);
+  background-image: url(img/index/hitachi.png);
 }
 
 .lg {
-  background-image: url(img/index/LG.png);
+  background-image: url(img/index/lg.png);
 }
 
 .aeg {
-  background-image: url(img/index/AEG.png);
+  background-image: url(img/index/aeg.png);
 }
 
 .metabo {
-  background-image: url(img/index/Metabo.png);
+  background-image: url(img/index/metabo.png);
 }
 
 /*Индекс. Преимущества*/
@@ -858,6 +883,7 @@ button {
 
 .feauters-discription p {
   display: inline-block;
+  vertical-align: middle;
 }
 
 
@@ -977,6 +1003,7 @@ button {
 .write-us {
   min-width: 300px;
   display: inline-block;
+  vertical-align: middle;
   font-size: 14px;
   text-transform: uppercase;
   padding: 10px 0;
@@ -1006,8 +1033,15 @@ button {
   width: 325px;
 }
 
+.footer-information p {
+  font-size: 18px;
+  line-height: 24px;
+  width: 328px;
+}
+
 .footer-logo {
   display: inline-block;
+  vertical-align: middle;
   padding: 19px 53px;
   font-size: 25px;
   text-align: center;
@@ -1087,6 +1121,7 @@ button {
 
 .network a {
   display: inline-block;
+  vertical-align: middle;
   border-radius: 50%;
   width: 42px;
   height: 42px;
@@ -1124,20 +1159,23 @@ button {
 
 
 /*формы*/
-.form-back {
+/* .form-back {  
+  position: fixed;
   display: none;
   width: 620px;
-  height: 430px;
+  top: 50%;
+  left: 50%;
+  height: 430px;  
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border: 1px solid red;
   border-top: 7px solid red;
   margin-bottom: 20px;
+  background-color: #ffffff;
   z-index: 10;
-}
+  margin-left: -310px;
+  margin-top: -215px;
+} */
 
-.form-back-container {
-  width: 460px;
-}
 
 .form-fields {
   display: flex;
@@ -1206,6 +1244,8 @@ button {
   border: solid 2px #ee3643;
 }
 
+
+
 .send-mail {
   font-family: 'Cuprum';
   text-transform: uppercase;
@@ -1226,9 +1266,9 @@ button {
 }
 
 .button-field {
+  width: 617px;
   display: block;
   text-align: center;
-  width: 100%;
   background-color: #f4f4f4;
 }
 
@@ -1254,23 +1294,40 @@ button {
 }
 
 .map-modal {
-  display: none;
+  position: fixed;
+  display: none;  
+  top: 50%;
+  left: 50%;
   width: 940px;
   height: 446px;
+  margin-left: -470px;
+  margin-top: -223px;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  background-color: #ffffff;
+  z-index: 10;
 }
+
+.form-back {
+  display: none;
+  height: 430px;
+  margin-left: -310px;
+  margin-top: -215px;
+}
+
+
 
 .cart-modal {
   display: none;
-  border: 1px solid red;
-  border-top: 7px solid red;
-  width: 620px;
+  height: 282px;
+  margin-left: -310px;
+  margin-top: -141px;
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
 }
 
 .order-text {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   font-size: 30px;
   line-height: 30px;
   margin: 75px 125px 68px 177px;
@@ -1335,13 +1392,22 @@ button {
 
 .modal-show {
   display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.modal {
+  width: 620px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  border: 1px solid red;
+  border-top: 7px solid red;
   background-color: #ffffff;
-  z-index: 20;
+  z-index: 10;
 }
+
 
 /* CATALOG */
 
@@ -1554,6 +1620,7 @@ button {
 
 .filters-title {
   display: inline-block;
+  vertical-align: middle;
   background-color: #f7f3ec;
   padding: 10px 152px 10px 18px;
   margin-left: 0;
@@ -1580,7 +1647,7 @@ button {
 .range-controls .scale {
   height: 2px;
   background: #d7dcde;
-} 
+}
 
 .range-controls .bar {
   width: 85%;
@@ -1615,6 +1682,8 @@ button {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: middle;
+  ;
   width: 50%;
   font-size: 16px;
   text-transform: uppercase;
@@ -1636,6 +1705,7 @@ button {
 .max-price {
   text-align: right;
 }
+
 /*Чекбокс*/
 
 .filters-fieldset {
@@ -1677,7 +1747,7 @@ button {
   padding-left: 30px;
 }
 
-input[type=checkbox]+label:before {
+ input[type="checkbox"]+label::before {
   content: url(img/index/checkbox-off.svg);
   position: absolute;
   display: inline-block;
@@ -1688,35 +1758,41 @@ input[type=checkbox]+label:before {
   height: 23px;
 }
 
-input[type=checkbox]:checked + label:before {
+input[type="checkbox"]:checked+label::before {
   content: url(img/index/checkbox-on.svg);
   width: 27px;
 }
 
 /*Радио чек*/
-input[type=radio] + label:before {
+.radio-field input[type="radio"]+label::before {
   content: url(img/index/radio-off.svg);
   position: absolute;
   display: inline-block;
+  vertical-align: middle;
   top: 0px;
   left: 0;
   width: 25px;
   height: 25px;
 }
 
-input[type=radio]:checked + label:before {
+.radio-field input[type="radio"]+label::after {
+  display: none;
+}
+
+.radio-field input[type="radio"]:checked+label::before {
   content: url(img/index/radio-on.svg);
   width: 27px;
 }
 
-.radio-label {
+.radio-field .radio-label {
   padding-left: 35px;
   padding-top: 3px;
 }
+
 /*Кнопка "показать*/
 .filter-button {
   font-size: 13px;
-  font-family:'PT Sans', 'Arial', 'sans-serif';
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   line-height: 18px;
   text-transform: uppercase;
   padding: 9px 38px;
@@ -1724,6 +1800,7 @@ input[type=radio]:checked + label:before {
   border-radius: 3px;
   background-color: #ffffff;
 }
+
 /*Карточки товара*/
 .tools {
   display: flex;
@@ -1853,4 +1930,48 @@ input[type=radio]:checked + label:before {
   font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   line-height: 24px;
+}
+/*Радио кнопки на слайдере*/
+.slider-buttons-list {
+  position: absolute;
+  bottom: 40px;
+  left: 295px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 30px;
+}
+
+.slider-buttons-list input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+input[type="radio"] + label::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ee3643;
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label::after {
+  opacity: 1;
 }
